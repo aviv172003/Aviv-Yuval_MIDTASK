@@ -1,0 +1,186 @@
+.header-banner {
+  background-image: url('../43efe36559db5412c697b6225d49762d.jpg'); /* קישור לתמונה */
+  background-size: cover; /* כיסוי מלא */
+  background-position: center; /* מיקום במרכז */
+  height: 300px; /* גובה ה-Header */
+  width: 100%; /* רוחב מלא */
+  position: relative; /* למיקום גמיש */
+}
+
+.header-title {
+  font-size: 3rem; /* גודל כותרת */
+  font-weight: bold; /* עיבוי טקסט */
+  text-shadow: 2px 2px 4px #F27EBE; /* צל לטקסט */
+}
+
+/* רקע העמוד */
+body {
+  background-color: #F2C9E4; /* ורוד בהיר */
+}
+
+/* רקע יחידות המידע */
+.card.content-card {
+  background-color: #F28705; /* אדום בורדו */
+  color: white; /* צבע טקסט לבן */
+  border: none; /* ללא מסגרת */
+}
+
+/* טקסט בתפריט */
+.navbar-nav .nav-link {
+  color: #F27EBE; /* אדום בורדו */
+  font-weight: bold; /* עיבוי טקסט */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #F24C3D; /* גוון אדום בהיר יותר בעת ריחוף */
+}
+
+.navbar-nav .nav-link.active {
+  color: #F28705; /* גוון אדום בהיר */
+  font-weight: bold; /* אופציונלי: מדגיש את הלינק */
+}
+
+/* כפתור החיפוש */
+.btn-outline-primary {
+  border-color: #F27EBE; /* מסגרת אדום בורדו */
+  color: #F27EBE; /* טקסט אדום בורדו */
+}
+
+.btn-outline-primary:hover {
+  background-color: #F2C9E4; /* רקע אדום בורדו */
+  border-color: #F27EBE; /* מסגרת אדום בורדו */
+  color: white; /* טקסט לבן */
+}
+
+/* עיצוב המודל */
+.modal-content {
+  background-color: white; /* ורוד בהיר */
+  border-radius: 10px; /* פינות מעוגלות */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* צללים */
+}
+
+.modal-header {
+  background-color: #F27EBE; /* ורוד כהה */
+  color: white; /* טקסט לבן */
+  border-bottom: none; /* ללא גבול */
+  border-radius: 10px 10px 0 0; /* פינות עליונות מעוגלות */
+}
+
+.modal-title {
+  font-size: 1.5rem; /* גודל כותרת */
+  font-weight: bold; /* עיבוי טקסט */
+}
+
+.modal-body {
+  color: #F27EBE; /* טקסט אדום בורדו */
+  text-align: center; /* טקסט ממורכז */
+}
+
+.modal-body img {
+  border-radius: 10px; /* עיגול פינות של התמונה */
+  margin-bottom: 15px; /* רווח תחתון */
+  max-height: 200px; /* גובה מקסימלי */
+  width: auto; /* שמירה על יחס התמונה */
+}
+
+.btn-close {
+  color: white; /* צבע לבן לאייקון הסגירה */
+  opacity: 1; /* שקיפות מלאה */
+}
+
+.btn-close:hover {
+  color: #F24C3D; /* גוון אדום בהיר יותר בעת ריחוף */
+}
+
+/* גובה קבוע לכרטיסים */
+.card.content-card {
+  background-color: #F28705; /* אדום בורדו */
+  color: white; /* צבע טקסט לבן */
+  border: none; /* ללא מסגרת */
+  height: 350px; /* גובה אחיד לכל הכרטיסים */
+  display: flex; /* שימוש ב-Flexbox */
+  flex-direction: column; /* יישור תוכן אנכי */
+  justify-content: space-between; /* ריווח תוכן פנימי */
+}
+
+/* תמונות בגודל אחיד */
+.card.content-card img {
+  height: 150px; /* גובה תמונה אחיד */
+  width: 100%; /* רוחב מלא */
+  object-fit: cover; /* התאמת התמונה */
+  border-radius: 5px; /* עיגול קל לפינות */
+}
+
+.modal-body img {
+  max-height: 200px; /* גובה מקסימלי */
+  width: 100%; /* רוחב מלא */
+  object-fit: contain; /* התאמה לשמירה על פרופורציות */
+}
+
+/* רווח בין השורות */
+#content-container {
+  display: flex; /* שימוש ב-Flexbox */
+  flex-wrap: wrap; /* עטיפה אוטומטית של השורות */
+  gap: 15px; /* רווח כללי בין הכרטיסים (אופקי ואנכי) */
+  justify-content: center; /* יישור למרכז */
+}
+
+.card.content-card {
+  margin-bottom: 15px; /* מרווח נוסף בתחתית, למקרה שהרשת לא חלה */
+}
+
+/* רקע כהה שקוף */
+.dimmed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* צבע שחור שקוף */
+  z-index: 10; /* מעל התוכן הרגיל */
+  pointer-events: none; /* כדי לא לחסום אינטראקציות עם יחידת המידע */
+}
+
+/* יחידת מידע שמודגשת */
+.content-card.highlight {
+  z-index: 11; /* מעל הרקע השקוף */
+  position: relative;
+  transform: scale(1.05); /* הגדלה קלה */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* צללה */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.content-card:hover {
+  animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* מחלקה שמפעילה את האנימציה */
+.content-card {
+  opacity: 0; /* הכרטיסיות מוסתרות בהתחלה */
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease; /* אפקט מעבר */
+}
+
+.content-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
